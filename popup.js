@@ -18,7 +18,7 @@ $(function() {
             var sectionArray = dataObj[key];
             var sectionHTML = "<div><h2>" + key + "</h2>";
             for(var i = 0; i < sectionArray.length; i++) {
-                sectionHTML += '<div data-clipboard-text="' + sectionArray[i] + '">' + getSample(sectionArray[i]) + "<span>" + getEnding(sectionArray[i]) + "</span></div>";
+                sectionHTML += '<div data-clipboard-text="' + cleanText(sectionArray[i]) + '">' + getSample(sectionArray[i]) + "<span>" + getEnding(sectionArray[i]) + "</span></div>";
             }
             sectionHTML += "</div>";
             $("#all").append(sectionHTML);
