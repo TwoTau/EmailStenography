@@ -2,7 +2,7 @@ input[type=text] {
     border: 0;
     border-bottom: 1px solid black;
     outline: 0;
-    width: 500px;
+    width: 700px;
     padding: 5px 5px;
     font-size: 1.5em;
 }
@@ -11,11 +11,13 @@ input[type=text] {
     margin: 7px 0;
     padding: 1px 7px;
     border-left: 2px solid #ccc;
-
+    font-size: 1.06em;
+    line-height: 1.4em;
 }
 
 #all div h2 {
     margin: 2px 5px 10px;
+    font-size: 1.4em;
 }
 
 #all div div {
@@ -23,6 +25,7 @@ input[type=text] {
     padding: 5px;
     background-color: #f6f6f6;
     border-left: 2px solid #fff;
+    transition: 0.2s;
 }
 
 #all div div span {
@@ -34,8 +37,47 @@ input[type=text] {
     border-left-color: #3055d6;
 }
 
-#all div div:hover span {
+body {
+    padding-bottom: 14px;
+}
+
+/*#all div div:hover span {
     display: inline;
+}*/
+
+#options {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+}
+
+#showCopy {
+    float: left;
+    margin-left: 10px;
+    padding: 5px 0;
+    font-size: 1.2em;
+    color: #3055d6;
+    font-weight: bold;
+    display: none;
+}
+
+#importexport {
+    float: right;
+    margin-right: 20px;
+}
+
+#importexport button {
+    outline: 0;
+    border: 0;
+    background: transparent;
+    padding: 7px 8px;
+    font-size: 1.2em;
+    transition: 0.2s;
+}
+
+#importexport button:hover {
+    background: #3055d6;
 }
 
 ::-webkit-scrollbar {

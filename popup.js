@@ -1,8 +1,14 @@
 $(function() {
 
-    var CHAR_LIMIT = 200;
+    var WORD_LIMIT = 40;
 
     setup(data);
+
+    $("#all div div").hover(function() {
+        $(this).children("span").slideDown(400);
+    }, function() {
+        $(this).children("span").slideUp(500);
+    });
 
     $("#search").change(function() {
         reset();
@@ -24,19 +30,24 @@ $(function() {
             $("#all").append(sectionHTML);
         }
 
-        var clipboard = new Clipboard("#all div");
+        var clipboard = new Clipboard("#all div div");
+        clipboard.on("success", function(e) {
+            $("#showCopy").fadeIn(300).fadeOut(500);
+
+            e.clearSelection();
+        });
     }
 
     function cleanText(text) {
-        return text.replace(/<\/?[^>]+(>|$)/g, "");
+        return text.replace(/<\/?[^>]+(>|$)/g, " ");
     }
 
     function getSample(longText) {
-        return cleanText(longText).substr(0, CHAR_LIMIT);
+        return cleanText(longText).split(" ").slice(0, WORD_LIMIT).join(" ");
     }
 
     function getEnding(longText) {
-        return cleanText(longText).substr(CHAR_LIMIT);
+        return cleanText(longText).split(" ").slice(WORD_LIMIT).join(" ");
     }
 });
 
