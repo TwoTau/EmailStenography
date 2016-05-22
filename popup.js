@@ -15,6 +15,10 @@ $(function() {
         setup(filter($(this).val()));
     });
 
+    $("#add").click(function() {
+
+    });
+
     function reset() {
         $("#all").html("");
     }
