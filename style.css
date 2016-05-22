@@ -8,13 +8,24 @@ input[type=text] {
 }
 
 #all div {
+    margin: 7px 0;
+    padding: 1px 7px;
+    border-left: 2px solid #ccc;
+
+}
+
+#all div h2 {
+    margin: 2px 5px 10px;
+}
+
+#all div div {
     margin: 5px 2px;
     padding: 5px;
-    background-color: #fafafa;
+    background-color: #f6f6f6;
     border-left: 2px solid #fff;
 }
 
-#all div:hover {
+#all div div:hover {
     background-color: #eee;
-    border-left-color: #aaa;
+    border-left-color: #3055d6;
 }

@@ -3,8 +3,14 @@ $(function() {
     setup();
 
     function setup() {
-        for(var i = 0; i < data.copypastas.length; i++) {
-            $("#all").append("<div>" + getSample(data.copypastas[i]) + "</div>")
+        for(var key in data) {
+            var sectionArray = data[key];
+            var sectionHTML = "<div><h2>" + key + "</h2>";
+            for(var i = 0; i < sectionArray.length; i++) {
+                sectionHTML += "<div>" + getSample(sectionArray[i]) + "</div>";
+            }
+            sectionHTML += "</div>";
+            $("#all").append(sectionHTML);
         }
     }
 
