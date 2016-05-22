@@ -15,6 +15,10 @@ $(function() {
         setup(filter($(this).val()));
     });
 
+    $("#addSubmit").click(function() {
+        
+    });
+
     $("#add").click(function() {
 
     });
