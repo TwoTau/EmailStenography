@@ -1,1 +1,20 @@
+input[type=text] {
+    border: 0;
+    border-bottom: 1px solid black;
+    outline: 0;
+    width: 400px;
+    padding: 5px 5px;
+    font-size: 1.5em;
+}
 
+#all div {
+    margin: 5px 2px;
+    padding: 5px;
+    background-color: #fafafa;
+    border-left: 2px solid #fff;
+}
+
+#all div:hover {
+    background-color: #eee;
+    border-left-color: #aaa;
+}

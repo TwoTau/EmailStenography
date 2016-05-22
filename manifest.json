@@ -5,6 +5,11 @@
     "description": "Has a preset of shorthand thingies when you click the thingy on the address bar",
     "version": "1.0.0",
 
+    "content_scripts": [ {
+        "matches": [ "http://*/*", "https://*/*"],
+        "js": ["jquery.min.js", "internet_souschef.js", "popup.js"]
+    } ],
+
     "browser_action": {
         "default_icon": "icon.png",
         "default_popup": "popup.html"
@@ -12,6 +17,7 @@
 
     "permissions": [
         "storage",
-        "activeTab"
+        "activeTab",
+        "tabs"
     ]
 }
