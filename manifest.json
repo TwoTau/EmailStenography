@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+
+    "name": "Email Stenography",
+    "description": "Has a preset of shorthand thingies when you click the thingy on the address bar",
+    "version": "1.0.0",
+
+    "permissions": [
+        "storage"
+    ],
+
+    "background": {
+        "scripts": [
+            "script.js"
+        ],
+        "persistent": true
+    }
+}
