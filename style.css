@@ -1,10 +1,23 @@
 input[type=text] {
     border: 0;
-    border-bottom: 1px solid black;
     outline: 0;
+}
+
+#search {
+    border-bottom: 1px solid black;
     width: 700px;
     padding: 5px 5px;
     font-size: 1.5em;
+}
+
+#addForm {
+    position: fixed;
+    top: 20%;
+}
+
+#addForm input {
+    padding: 10px;
+    display: block;
 }
 
 #all div {
