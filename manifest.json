@@ -6,8 +6,8 @@
     "version": "1.0.0",
 
     "content_scripts": [ {
-        "matches": [ "http://*/*", "https://*/*"],
-        "js": ["jquery.min.js", "internet_souschef.js", "popup.js"]
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["jquery.min.js", "clipboard.min.js", "internet_souschef.js", "popup.js"]
     } ],
 
     "browser_action": {

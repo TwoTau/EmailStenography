@@ -9,11 +9,14 @@ $(function() {
             var sectionArray = data[key];
             var sectionHTML = "<div><h2>" + key + "</h2>";
             for(var i = 0; i < sectionArray.length; i++) {
-                sectionHTML += "<div>" + getSample(sectionArray[i]) + "<span>" + getEnding(sectionArray[i]) + "</span></div>";
+                sectionHTML += '<div data-clipboard-text="' + sectionArray[i] + '">' + getSample(sectionArray[i]) + "<span>" + getEnding(sectionArray[i]) + "</span></div>";
             }
             sectionHTML += "</div>";
             $("#all").append(sectionHTML);
         }
+
+        var clipboard = new Clipboard("#all div");
+
     }
 
     function cleanText(text) {
