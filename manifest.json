@@ -2,11 +2,11 @@
     "manifest_version": 2,
 
     "name": "Email Stenography",
-    "description": "Has a preset of shorthand thingies when you click the thingy on the address bar",
+    "description": "Has a list of copypastas that you can copy into your clipboard.",
     "version": "1.0.0",
 
     "content_scripts": [ {
-        "matches": ["http://*/*", "https://*/*"],
+        "matches": ["http://*/*"],
         "js": ["jquery.min.js", "clipboard.min.js", "internet_souschef.js", "popup.js"]
     } ],
 
@@ -15,9 +15,5 @@
         "default_popup": "popup.html"
     },
 
-    "permissions": [
-        "storage",
-        "activeTab",
-        "tabs"
-    ]
+    "permissions": []
 }
