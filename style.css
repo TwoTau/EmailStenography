@@ -25,7 +25,32 @@ input[type=text] {
     border-left: 2px solid #fff;
 }
 
+#all div div span {
+    display: none;
+}
+
 #all div div:hover {
     background-color: #eee;
     border-left-color: #3055d6;
+}
+
+#all div div:hover span {
+    display: inline;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #888;
 }

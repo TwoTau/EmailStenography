@@ -1,5 +1,7 @@
 $(function() {
 
+    var CHAR_LIMIT = 200;
+
     setup();
 
     function setup() {
@@ -7,15 +9,23 @@ $(function() {
             var sectionArray = data[key];
             var sectionHTML = "<div><h2>" + key + "</h2>";
             for(var i = 0; i < sectionArray.length; i++) {
-                sectionHTML += "<div>" + getSample(sectionArray[i]) + "</div>";
+                sectionHTML += "<div>" + getSample(sectionArray[i]) + "<span>" + getEnding(sectionArray[i]) + "</span></div>";
             }
             sectionHTML += "</div>";
             $("#all").append(sectionHTML);
         }
     }
 
+    function cleanText(text) {
+        return text.replace(/<\/?[^>]+(>|$)/g, "");
+    }
+
     function getSample(longText) {
-        return longText.substr(0, 200);
+        return cleanText(longText).substr(0, CHAR_LIMIT);
+    }
+
+    function getEnding(longText) {
+        return cleanText(longText).substr(CHAR_LIMIT);
     }
 
     function getRandom() {
