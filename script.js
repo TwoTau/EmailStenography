@@ -6,10 +6,10 @@ $(function() {
     ];
 
     function getRandom() {
-        return copypastas[Math.floor(Math.random()*4)];
+        return copypastas[Math.floor(Math.random()*copypastas.length)];
     }
 
     $("#random").click(function() {
-        alert(copypastas[1]);
+        $("#thingy").html('what');
     });
 });

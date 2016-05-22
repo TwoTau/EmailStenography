@@ -11,13 +11,7 @@
     },
 
     "permissions": [
-        "storage"
-    ],
-
-    "background": {
-        "scripts": [
-            "script.js"
-        ],
-        "persistent": true
-    }
+        "storage",
+        "activeTab"
+    ]
 }
